@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Result</title>
+ </head>
+ <body>
+
+<h1>Result</h1>
+
+{% if msg %}
+   <h1>{{ msg }}</h1>
+   {% endif %}
+
+   {% if img_src %}
+     <img src='{{ img_src }}'>
+   {% endif %}
+  
+   {% if extracted_text %}
+   <table border = 1>
+     <p> The extracted text from the image above is: <b> 
+      {% for key, value in extracted_text.items() %}
+      <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+      </tr>
+      {% endfor %}
+   </table>   
+ </b></p>
+  
+   {% else %}
+     The extracted text will be displayed here
+   {% endif %}
+
+ </body>
+
+</html
