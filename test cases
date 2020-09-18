@@ -1,3 +1,5 @@
 ---test cases
-1. all format of images should be suppported
+1. all format of images should be suppported [jpeg, png, ]
 2. all sizes of images should also be supported
+3. same user registering again wont be supported.
+4. exception handling done
