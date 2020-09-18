@@ -5,6 +5,7 @@ except ImportError:
 import pytesseract
 import cv2
 
+
 def ocr_core(file):
     """
     This function will handle the core OCR processing of images.
