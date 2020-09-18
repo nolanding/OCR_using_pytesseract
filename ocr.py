@@ -12,6 +12,8 @@ def ocr_core(file):
     """
     # text = pytesseract.image_to_string(Image.open(filename))  # We'll use Pillow's Image class to open the image and pytesseract to detect the string in the image
     # return text
+    print(file)
+    print('im in ocr')
     image = cv2.imread(file)
     image = cv2.resize(image, None, fx=1.5, fy=1.5, interpolation=cv2.INTER_CUBIC)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -31,6 +33,7 @@ def ocr_core(file):
     	pan_details['name']	= data[2]
     	pan_details['dob']	= data[4]
     	pan_details['pan_number'] = data[6].split(' ')[0]
+    print(pan_details)
     return pan_details
 
 

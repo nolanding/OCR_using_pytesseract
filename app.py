@@ -20,11 +20,13 @@ def allowed_file(filename):
 # route and function to handle the home page
 @app.route('/')
 def home_page():
+    print('home_page')
     return render_template('index.html')
 
 # route and function to handle the upload page
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_page():
+    print('main_block')
     if request.method == 'POST':
         # check if there is a file in the request
         if 'file' not in request.files:
