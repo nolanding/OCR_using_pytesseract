@@ -1,2 +1,3 @@
 pytesseract==0.2.6
 flask
+gunicorn
